@@ -40,7 +40,7 @@ export class App extends Component {
   render() {
     const normalizedFilter = this.state.filter.toLowerCase();
     const filteredContacts = this.state.contacts.filter(({ name }) =>
-      name.toLowerCase().includes(this.state.filter)
+      name.toLowerCase().includes(normalizedFilter)
     );
 
     return (
